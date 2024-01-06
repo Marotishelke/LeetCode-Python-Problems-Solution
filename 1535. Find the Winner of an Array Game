@@ -1,0 +1,21 @@
+class Solution:
+    def getWinner(self, arr: List[int], k: int) -> int:
+        
+        current_winner = arr[0]
+        current_win_streak = 0
+
+        for i in range(1, len(arr)):
+            # Check the current winner is greater than next element, if it is then they will win next game as well.
+            if current_winner > arr[i]:
+                current_win_streak += 1
+
+            # If the current winner lose the game
+            else:
+                current_winner = arr[i]
+                current_win_streak = 1
+            
+            # If the current winning streak reaches k or current winner is the maximum element
+            if current_win_streak == k :
+                return current_winner
+        return current_winner
+        
