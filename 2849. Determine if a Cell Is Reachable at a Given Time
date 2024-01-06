@@ -1,0 +1,23 @@
+class Solution:
+    def isReachableAtTime(self, sx: int, sy: int, fx: int, fy: int, t: int) -> bool:
+        # --------------------------------------------
+        # Check if the starting point is the same as target point
+        if sx == fx and sy == fy:
+            # Check if time is 1, and return false (Impossible to stay at the same cell for 1 second)
+            if t == 1:
+                return False
+        # --------------------------------------------
+        
+        # Calculate the absolute difference in x and y coordinate between the starting and target points.
+        x_diff = abs(sx - fx)
+        y_diff = abs(sy - fy)
+
+        # Calculate the maximum difference betwwen x_diff and y_diff
+        max_diff = max(x_diff, y_diff)
+
+        # Check the maximum difference is less than or equal to time or not
+        if max_diff <= t:
+            return True # It is possible to reach target
+        
+        # If the max difference is greater than give time it won't possible to reach target
+        return False
