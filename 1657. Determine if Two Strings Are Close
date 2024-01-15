@@ -1,0 +1,15 @@
+class Solution:
+    def closeStrings(self, word1: str, word2: str) -> bool:
+        # Step 1 : If lengths are different
+        if len(word1) != len(word2):
+            return False
+
+        hash_word1 = collections.Counter(word1)
+        hash_word2 = collections.Counter(word2)
+
+        # Step 2 : If unique are different
+        if hash_word1.keys() != hash_word2.keys():
+            return False
+        
+        # Step 3 : If Counts of each char fro two strings are matchable
+        return collections.Counter(hash_word1.values()) == collections.Counter(hash_word2.values())
