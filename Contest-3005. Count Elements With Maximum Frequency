@@ -1,0 +1,20 @@
+import collections
+
+class Solution:
+    def maxFrequencyElements(self, nums: List[int]) -> int:
+        total_freq = 0
+
+        nums_counter = collections.Counter(nums)
+        max_freq = max(nums_counter.values())
+
+        for value in nums_counter.values():
+            if value == max_freq:
+                total_freq += value 
+        return total_freq
+
+# nums = [1, 2, 2, 3, 1, 4]   # o\p ---> 4
+# nums = [1, 2, 3, 4, 5]   # o/p ----> 5
+# maxx_freq_cnt = find_max_freq(nums)
+# print(maxx_freq_cnt)
+
+        
