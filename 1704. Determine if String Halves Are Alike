@@ -1,0 +1,27 @@
+class Solution:
+    def halvesAreAlike(self, s: str) -> bool:
+        # ----------------------------------------------
+        """
+            Step1 : Split string two halves a,b
+            Step2 : Count vowels from both string 
+            Step3 : if both strings has same number of vowels then return true else return False
+        """
+        # ----------------------------------------------
+
+        # Step 1
+        n = len(s)
+        a = s[:n//2]
+        b = s[n//2:]
+
+        cnt_vowels_a = 0
+        cnt_vowels_b = 0
+
+        # # Step2: Count Vowels
+        for i in range(n//2):
+            if a[i].lower() in 'aeiou':
+                cnt_vowels_a += 1
+            if b[i].lower() in 'aeiou':
+                cnt_vowels_b += 1
+        
+        # Step 3
+        return cnt_vowels_a == cnt_vowels_b
