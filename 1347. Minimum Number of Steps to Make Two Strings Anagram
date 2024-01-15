@@ -1,0 +1,27 @@
+class Solution:
+    def minSteps(self, s: str, t: str) -> int:
+        s_counter = collections.Counter(s)
+        t_counter = collections.Counter(t)
+        min_steps = 0
+
+        for key in t_counter:
+            if key not in s_counter:
+                s_counter[key] = 0
+            diff = t_counter[key] - s_counter[key]
+            if diff >= 0:
+                min_steps += diff
+        return min_steps
+        
+        """
+        # Approach 1 (Time Limit Exceeded Error)
+        min_step = 0
+        s_lst = list(s)
+
+        for i in t:
+            if i in s_lst:
+                s_lst.remove(i)
+            else:
+                min_step += 1
+        
+        return min_step
+        """
