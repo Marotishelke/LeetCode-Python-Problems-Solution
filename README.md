@@ -2,6 +2,9 @@
 
 This repository contains my solutions to various LeetCode problems. Each solution is implemented in Python and includes detailed explanations.
 
+<img src="images/leet-code dashboard.png" alt="Leet Code Dashboard" width="300">
+
+
 ## 🌟 Introduction
 
 Welcome to my LeetCode problem solutions repository! I love tackling algorithmic challenges to enhance my problem-solving skills. Here, you'll discover Python implementations of solutions to a diverse range of engaging LeetCode problems.
