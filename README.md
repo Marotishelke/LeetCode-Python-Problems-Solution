@@ -2,7 +2,7 @@
 
 This repository contains my solutions to various LeetCode problems. Each solution is implemented in Python and includes detailed explanations.
 
-<img src="images/leet-code dashboard.png" alt="Leet Code Dashboard" width="500", height="250">
+<img src="images/leet-code dashboard.png" alt="Leet Code Dashboard" width=500, height=250>
 
 
 ## 🌟 Introduction
