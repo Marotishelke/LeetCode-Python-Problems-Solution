@@ -4,7 +4,7 @@ class Solution:
         
         sorted_meetings = []
         meetings.sort(key=lambda x:x[2])
-
+ 
         seen_time = set()
         
         for meeting in meetings:
